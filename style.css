@@ -1,0 +1,921 @@
+/* 
+
+     ============================================================
+      
+          _____________   ^^^^^^^^^^    ____________________
+
+[   By ~Aryan Maurya Mr.perfect https://amsrportfolio.netlify.app  ]
+
+          _____________   ^^^^^^^^^^    ____________________
+
+     ============================================================
+
+*/
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 400px;
+  height: 305px;
+  overflow: hidden;
+}
+*::before,
+*::after {
+  content: "";
+  position: absolute;
+}
+.bubbles,
+.fish_body,
+.tail1,
+.tail2,
+.fish_,
+.fish__,
+.eye,
+.bubble1,
+.bubble2,
+.bubble3,
+.bubble4 {
+  position: absolute;
+}
+.fish_body,
+.eye,
+.bubbles,
+.eye::before {
+  border-radius: 50%;
+}
+.bubbles,
+.fish_body::before,
+.eye::before {
+  width: 10px;
+  height: 10px;
+}
+.bubbles,
+.eye {
+  top: 20%;
+}
+.bubbles {
+  left: 40%;
+}
+.bubbles {
+  background: #77bec7;
+  border: 1px solid #bcdfe3;
+  opacity: 0;
+}
+.fish {
+  position: relative;
+  transform: scale(0.4) rotateY(180deg);
+  transition: top 0.15s ease-in 0s;
+  top: 30px;
+  left: -30px;
+  width: 200px;
+  height: 100px;
+  z-index: 999;
+  background: transparent;
+}
+.container {
+  background: linear-gradient(
+    135deg,
+    #306c74 10%,
+    #367982 20%,
+    #3b848d 35%,
+    #459ba6 40%,
+    #56aeb9 50%,
+    #459ba6 65%,
+    #367982 80%,
+    #2b6067 90%
+  );
+  background-repeat: no-repeat;
+}
+.fish_body {
+  z-index: 99;
+  top: 15%;
+  left: 0;
+  width: 90%;
+  height: 70%;
+  background: linear-gradient(
+    70deg,
+    #ff8609 64%,
+    #000 66%,
+    #fff 67%,
+    #fff 72%,
+    #000 73%,
+    #ff8609 75%
+  );
+  box-shadow: inset -1px -11px 10px #684800;
+}
+.tail1,
+.tail2,
+.fish_ {
+  border-radius: 50% 40% 40% 50%;
+  z-index: 9;
+}
+.tail1,
+.tail2 {
+  left: 81%;
+  width: 25%;
+  height: 25%;
+  background: linear-gradient(
+    to right,
+    #000 5%,
+    #fff 5%,
+    #fff 35%,
+    #000 35%,
+    #000 40%,
+    #e97600 40%,
+    #e97600 60%,
+    #684800 80%,
+    #000 99%
+  );
+}
+.tail1 {
+  transform: rotate(-30deg);
+  top: 24%;
+  animation: tail1 0.5s ease infinite;
+}
+.tail2 {
+  top: 52%;
+  transform: rotate(30deg);
+  animation: tail2 0.5s ease infinite;
+}
+.plant2 {
+  left: 45%;
+}
+.fish_ {
+  top: 40%;
+  left: 45%;
+  width: 17%;
+  height: 17%;
+  background: linear-gradient(to right, #ff8609 60%, #684800 75%, #000 90%);
+  animation: fish_ 0.7s ease infinite;
+}
+.fish__,
+.eye::before {
+  left: 35%;
+}
+.fish__ {
+  top: 6%;
+  transform: rotate(5deg);
+  background: linear-gradient(
+    175deg,
+    #fff 30%,
+    #000 35%,
+    #000 40%,
+    #e97600 50%
+  );
+  width: 80px;
+  height: 15px;
+  border-radius: 50% 140% 50% 20%;
+}
+.eye {
+  left: 20%;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  animation: fish_eye 8s linear infinite;
+}
+.eye::before {
+  background: #000;
+}
+.bubble1 {
+  left: 9%;
+  animation: __bubble__ 2s 1.6s ease infinite;
+}
+.bubble2 {
+  left: 7%;
+  animation: __bubble__ 2s 1.7s ease infinite;
+}
+.bubble3 {
+  left: 5%;
+  animation: __bubble__ 2s 1.9s ease infinite;
+}
+.bubble4 {
+  left: 3%;
+  animation: __bubble__ 2s 1.5s ease infinite;
+}
+.bubble11 {
+  left: 10%;
+  animation: __bubble__ 2s 2.1s ease infinite;
+}
+.bubble12 {
+  left: 5%;
+  animation: __bubble__ 2s 2.35s ease infinite;
+}
+.bubble13 {
+  left: 6%;
+  animation: __bubble__ 2s 2.55s ease infinite;
+}
+.bubble14 {
+  left: 4%;
+  animation: __bubble__ 2s 2.8s ease infinite;
+}
+.bg-fish {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  animation: bg-fish-animation 10.5s ease-in infinite;
+}
+#bg-fish {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  z-index: 80;
+}
+.bubbles-small {
+  position: absolute;
+  opacity: 0;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: #77bec7;
+  border: 1px solid #bcdfe3;
+}
+.bubble5 {
+  left: 67%;
+  top: 23%;
+  animation: bubble-small 3s 1.8s ease infinite;
+}
+.bubble6 {
+  left: 59%;
+  top: 31%;
+  animation: bubble-small 3s 1.7s ease infinite;
+}
+.bubble7 {
+  left: 62%;
+  top: 42%;
+  animation: bubble-small 3s 1.5s ease infinite;
+}
+.jellyfish {
+  position: relative;
+  top: 100px;
+  left: 150px;
+  width: 20px;
+  height: 20px;
+  z-index: 88;
+  animation: jellyfish 40s linear infinite;
+}
+#jellyfish1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  animation: jellyfish1 5s ease-in infinite;
+  z-index: 9;
+}
+#jellyfish2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  animation: jellyfish2 5s ease-in infinite;
+  z-index: 9;
+}
+.bubble8 {
+  left: 67%;
+  top: 23%;
+  animation: bubble-small 3s 1.8s ease infinite;
+}
+.bubble9 {
+  left: 59%;
+  top: 31%;
+  animation: bubble-small 3s 1.7s ease infinite;
+}
+.bubble10 {
+  left: 62%;
+  top: 42%;
+  animation: bubble-small 3s 1.5s ease infinite;
+}
+button {
+  font-size: 8px;
+  color: black;
+}
+#up-button {
+  position: absolute;
+  left: 335px;
+  top: 185px;
+  width: 55px;
+  height: 55px;
+  border-radius: 10px;
+  z-index: 99999;
+  background: #aef0ff;
+  opacity: 0.3;
+}
+#down-button {
+  position: absolute;
+  left: 335px;
+  top: 245px;
+  width: 55px;
+  height: 55px;
+  border-radius: 10px;
+  background: #aef0ff;
+  z-index: 99999;
+  opacity: 0.3;
+}
+#up-button:focus,
+#down-button:focus {
+  outline: none;
+}
+.rock {
+  position: relative;
+  top: 115px;
+  left: 300px;
+  width: 75px;
+  height: 45px;
+  background: #7b7777;
+  z-index: 999;
+  border-radius: 50% 40% 10% 30%;
+  box-shadow: inset 1vw -1.5vh 10px #565353, inset -1.5vw -1.5vh 10px #565353,
+    0vw 2vh 10px #191919;
+}
+
+/* 
+
+     ============================================================
+      
+          _____________   ^^^^^^^^^^    ____________________
+
+[   By ~Aryan Maurya Mr.perfect https://amsrportfolio.netlify.app  ]
+
+          _____________   ^^^^^^^^^^    ____________________
+
+     ============================================================
+
+*/
+
+#starfish {
+  position: relative;
+  top: 60px;
+  left: 325px;
+  width: 25px;
+  height: 25px;
+  z-index: 9999;
+}
+#shark {
+  position: relative;
+  top: -180px;
+  left: 300px;
+  width: 40px;
+  height: 40px;
+  animation: shark 15s linear infinite;
+}
+.score {
+  position: absolute;
+  left: 340px;
+  top: 5px;
+  width: 60px;
+  height: 10px;
+  background: transparent;
+  font-size: 10px;
+  white-space: nowrap;
+  text-align: center;
+}
+.seahorse-container {
+  position: relative;
+  top: -10px;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  animation: seahorse 10s ease-in infinite;
+  z-index: 99;
+}
+#seahorse-icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.turtle-container {
+  position: relative;
+  top: -100px;
+  left: 500px;
+  width: 40px;
+  height: 40px;
+  animation: turtle 17s linear infinite;
+}
+#turtle-icon {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  transform: rotateY(180deg);
+  top: 0;
+  left: 0;
+}
+.bubble15 {
+  left: 72%;
+  top: 3%;
+  animation: bubble-small 3s 1.8s ease infinite;
+}
+.bubble16 {
+  left: 74%;
+  top: 1%;
+  animation: bubble-small 3s 1.7s ease infinite;
+}
+.bubble17 {
+  left: 71%;
+  top: 2%;
+  animation: bubble-small 3s 1.5s ease infinite;
+}
+.bubble18 {
+  left: 79%;
+  top: 43%;
+  animation: bubble-small 4s 6.8s ease infinite;
+}
+.bubble19 {
+  left: 84%;
+  top: 41%;
+  animation: bubble-small 4s 7.4s ease infinite;
+}
+.bubble20 {
+  left: 81%;
+  top: 42%;
+  animation: bubble-small 4s 7.9s ease infinite;
+}
+.count-of-worms {
+  position: absolute;
+  left: 295px;
+  top: 0.5px;
+  width: 50px;
+  height: 20px;
+  white-space: nowrap;
+}
+#worm-icon {
+  position: relative;
+  display: inline-block;
+  left: 10px;
+  top: 0;
+  width: 20px;
+  height: 20px;
+}
+#count-of-worms {
+  position: relative;
+  display: inline-block;
+  left: 0;
+  top: -7.5px;
+  width: 25px;
+  height: 12px;
+  text-align: center;
+  font-size: 9px;
+  white-space: nowrap;
+  margin: 0;
+}
+.load-container {
+  position: fixed;
+  z-index: 999999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #fefefe;
+}
+.image {
+  position: relative;
+  margin: auto;
+  top: 29%;
+  width: 100px;
+  height: 100px;
+  background: url(https://dl.dropbox.com/s/fz7vrvv5360r2kx/sea.png);
+  background-size: 100%;
+}
+.text {
+  position: relative;
+  margin: auto;
+  top: 31%;
+  border: 1px solid #5586ff;
+  width: 142px;
+  height: 31px;
+  font-size: 12px;
+  padding: 5px 10px;
+  white-space: nowrap;
+  color: #5586ff;
+}
+.progress-status {
+  position: relative;
+  margin: auto;
+  top: 32%;
+  width: 100vw;
+  height: 15px;
+  color: #5586ff;
+  text-align: center;
+  font-size: 12px;
+}
+progress {
+  position: relative;
+  display: block;
+  top: 33%;
+  margin: auto;
+  width: 200px;
+  height: 20px;
+  color: #7b2929;
+  background: #444444;
+}
+.play-container {
+  position: relative;
+  display: none;
+  top: 35%;
+  margin: auto;
+  width: 80px;
+  height: 25px;
+  text-align: center;
+  padding: 5px;
+  color: #5586ff;
+  border: 1px solid #5586ff;
+  font-size: 20px;
+  cursor: pointer;
+}
+.sounds-info {
+  position: relative;
+  display: none;
+  top: 37%;
+  margin: auto;
+  width: 300px;
+  height: 17px;
+  font-size: 14px;
+  text-align: center;
+  padding: 5px 0;
+  color: #5586ff;
+  border: 1px solid #5586ff;
+  white-space: nowrap;
+}
+.bottom-text {
+  position: relative;
+  display: none;
+  top: 39%;
+  margin: auto;
+  width: 120px;
+  height: 15px;
+  font-size: 12px;
+  text-align: center;
+  padding: 5px;
+  color: #5586ff;
+  border: 1px solid #5586ff;
+  white-space: nowrap;
+}
+.run-plant-animation {
+  animation: plant-animation 4s linear infinite;
+}
+.run-seaweed-animation {
+  animation: seaweed-animation 4s linear infinite;
+}
+.run-seaweed2-animation {
+  animation: seaweed2-animation 4s linear infinite;
+}
+.run-submarine-animation {
+  animation: submarine 25s linear infinite;
+}
+.run-rock-animation {
+  animation: rock-animation 4s linear infinite;
+}
+.run-swordfish-animation {
+  animation: swordfish 3.5s linear infinite;
+}
+.run-hook-move-animation {
+  animation: hook 2.6s linear infinite;
+}
+.run-worm-move-animation {
+  animation: worm 5.2s linear infinite;
+}
+.run-disappear-animation {
+  animation: disappear 1s linear 1;
+  animation-fill-mode: both;
+}
+.run-appear-animation {
+  animation: disappear 1s linear 1;
+  animation-fill-mode: both;
+  animation-direction: reverse;
+}
+
+/* 
+
+     ============================================================
+      
+          _____________   ^^^^^^^^^^    ____________________
+
+[   By ~Aryan Maurya Mr.perfect https://amsrportfolio.netlify.app  ]
+
+          _____________   ^^^^^^^^^^    ____________________
+
+     ============================================================
+
+*/
+
+@keyframes fish_eye {
+  0% {
+    transform: rotate(-80deg);
+    opacity: 1;
+  }
+  25% {
+    transform: rotate(-150deg);
+    opacity: 1;
+  }
+  40% {
+    transform: rotate(-150deg);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(-90deg);
+    opacity: 1;
+  }
+  75% {
+    transform: rotate(-90deg);
+    opacity: 1;
+  }
+  90% {
+    transform: rotate(-150deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-80deg);
+    opacity: 1;
+  }
+}
+@keyframes tail1 {
+  0% {
+    transform: skew(0deg) scaleY(1) rotate(-30deg);
+  }
+  25% {
+    transform: skew(20deg) scaleY(0.9) rotate(-30deg);
+  }
+  50% {
+    transform: skew(-20deg) scaleY(0.9) rotate(-30deg);
+  }
+  75% {
+    transform: scaleY(0.9) rotate(-30deg);
+  }
+  100% {
+    transform: skew(-6deg) scaleY(1) rotate(-30deg);
+  }
+}
+@keyframes tail2 {
+  0% {
+    transform: skew(0deg) scaleY(1) rotate(30deg);
+  }
+  25% {
+    transform: skew(-20deg) scaleY(0.9) rotate(30deg);
+  }
+  50% {
+    transform: skew(20deg) scaleY(0.9) rotate(30deg);
+  }
+  75% {
+    transform: scaleY(0.9) rotate(30deg);
+  }
+  100% {
+    transform: skew(6deg) scaleY(1) rotate(30deg);
+  }
+}
+@keyframes fish_ {
+  0% {
+    transform: skewY(0deg) scaleY(1);
+    opacity: 1;
+  }
+  25% {
+    transform: skewY(-15deg) scaleY(0.9);
+    opacity: 1;
+  }
+  50% {
+    transform: skewY(10deg) scaleY(1);
+    opacity: 1;
+  }
+  75% {
+    transform: scaleY(0.9) skewY(15deg);
+    opacity: 1;
+  }
+  100% {
+    transform: skewY(0deg) scaleY(1);
+    opacity: 1;
+  }
+}
+@keyframes __bubble__ {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-1000px);
+    opacity: 1;
+  }
+}
+@keyframes bubble-small {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-400px);
+    opacity: 1;
+  }
+}
+@keyframes seaweed-animation {
+  from {
+    transform: translateX(700px) rotate(5deg);
+  }
+  50% {
+    transform: translateX(0) rotate(-3deg);
+  }
+  to {
+    transform: translateX(-650px) rotate(0deg);
+  }
+}
+@keyframes seaweed2-animation {
+  from {
+    transform: translateX(750px) rotate(3deg);
+  }
+  50% {
+    transform: translateX(50px) rotate(-6deg);
+  }
+  to {
+    transform: translateX(-600px) rotate(0deg);
+  }
+}
+@keyframes plant-animation {
+  from {
+    transform: translateX(800px) rotate(-5deg);
+  }
+  50% {
+    transform: translateX(100px) rotate(5deg);
+  }
+  to {
+    transform: translateX(-550px) rotate(0deg);
+  }
+}
+@keyframes rock-animation {
+  from {
+    transform: translateX(850px) rotate(-5deg);
+  }
+  50% {
+    transform: translateX(150px) rotate(5deg);
+  }
+  to {
+    transform: translateX(-500px) rotate(0deg);
+  }
+}
+@keyframes bg-fish-animation {
+  from {
+    transform: translate(-50px, 150px);
+  }
+  to {
+    transform: translate(600px, 50px);
+  }
+}
+@keyframes jellyfish {
+  from {
+    transform: translateX(260px);
+  }
+  to {
+    transform: translateX(-200px);
+  }
+}
+@keyframes jellyfish1 {
+  from {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes jellyfish2 {
+  from {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes submarine {
+  from {
+    transform: translate(-100px, 200px);
+  }
+  to {
+    transform: translate(800px, 250px);
+  }
+}
+@keyframes seahorse {
+  from {
+    transform: translate(-50px, 0);
+  }
+  to {
+    transform: translate(500px, -150px);
+  }
+}
+@keyframes turtle {
+  from {
+    transform: translate(50px, 110px);
+  }
+  to {
+    transform: translate(-600px, 110px);
+  }
+}
+@keyframes shark {
+  from {
+    transform: translate(100px, 0);
+    opacity: 1;
+  }
+  to {
+    transform: translate(-450px, 20px);
+    opacity: 1;
+  }
+}
+@keyframes swordfish {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-1699px);
+  }
+}
+@keyframes hook {
+  from {
+    transform: scaleX(1) scaleY(2) translateX(0);
+  }
+  to {
+    transform: scaleX(1) scaleY(2) translateX(-699px);
+  }
+}
+@keyframes worm {
+  from {
+    transform: scale(1) translateX(0);
+  }
+  to {
+    transform: scale(1) translateX(-1398px);
+  }
+}
+@keyframes disappear {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* 
+
+     ============================================================
+      
+          _____________   ^^^^^^^^^^    ____________________
+
+[   By ~Aryan Maurya Mr.perfect https://amsrportfolio.netlify.app  ]
+
+          _____________   ^^^^^^^^^^    ____________________
+
+     ============================================================
+
+*/
